@@ -23,6 +23,23 @@
   <head>
     <title>sample widget</title>
     <script>
+        var JSON_URL = 'https://phji.github.io/sample_loader/sample_v1.json';
+
+        var request = new XMLHttpRequest();
+        request.open('GET', API_URL, true);
+        request.responseType = 'json';
+
+        request.onload = function () {
+            var data = this.response;
+            var name = data['name'];
+
+            var e = document.querySelector('body');
+            var div = document.createElement('div');
+            div.innerHTML = name;
+            e.appendChild(div);
+        };
+
+         request.send();
     </script>
     <meta name="viewport" content="user-scalable=no">
   </head>
