@@ -26,7 +26,7 @@
         var JSON_URL = 'https://phji.github.io/sample_loader/sample_v1.json';
 
         var request = new XMLHttpRequest();
-        request.open('GET', API_URL, true);
+        request.open('GET', JSON_URL, true);
         request.responseType = 'json';
 
         request.onload = function () {
